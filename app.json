@@ -1,23 +1,19 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/ucenter/index/index",
-    "pages/ucenter/feedback/feedback",
-    "pages/ucenter/collect/collect",
     "pages/auth/login/login",
-    "pages/search/search",
     "pages/about/about",
     "pages/help/help",
-    "pages/article/article",
-    "pages/articleDetail/articleDetail"
+    "pages/works/works",
+    "pages/worksList/worksList"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#FFFFFF",
-    "navigationBarTitleText": "个人博客",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "创作展示",
     "enablePullDownRefresh": true,
-    "navigationBarTextStyle": "black",
-    "backgroundColor": "#FFFFFF",
-    "backgroundTextStyle": "dark"
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#000",
+    "backgroundTextStyle": "light"
   },
   "tabBar": {
     "backgroundColor": "#fafafa",

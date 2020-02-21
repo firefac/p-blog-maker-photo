@@ -1,16 +1,15 @@
 <view class="container">
-
-  <view class="about-item">
-
-    <view class="item-left">
-      <label>项目名称: </label>
-       <text>{{shopInfo.name}}</text> 
-    </view>
+  <view class="banner" wx:if="{{about.coverUrl != null}}">
+    <image src="{{about.coverUrl}}" mode="widthFix"></image>
   </view>
-  <view class="about-item">
-    <view class="item-left">
-      <label>网站地址: </label>
-       <text>{{shopInfo.address}}</text> 
-    </view>
+
+  <view class="content">
+    <view class="title">{{about.title}}</view>
+    <view class="sub-title" wx:if="{{about.subTitle != null}}">{{about.subTitle}}</view>
+
+    <scroll-view class="detail">
+      <import src="../../lib/wxParse/wxParse.wxml" />
+      <template is="wxParse" data="{{wxParseData:detail.nodes}}" />
+    </scroll-view>
   </view>
 </view>

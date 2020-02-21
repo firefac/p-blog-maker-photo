@@ -2,71 +2,17 @@
 
 <!--index.wxml-->
 <view class="container">
-  <view class="search">
-    <navigator url="/pages/ucenter/index/index">
-      <van-icon  name="contact" size="45rpx" />
-    </navigator>
-    <navigator url="/pages/search/search" class="input">
-      <image class="icon"></image>
-      <text class="txt">搜索</text>
-    </navigator>
+  <view class="banner" style="height:{{winHeight}}px">
+    <block wx:for="{{hotArticles}}" wx:key="id" wx:for-index="idx">
+      <image class="pic" hidden="{{0 != idx && hidepic == null}}" src="{{item.url}}" animation="{{num == idx ? showpic : hidepic}}" mode="aspectFill" style="height:{{winHeight}}px"/>
+    </block>
   </view>
-  <van-tabs sticky  bind:change="switchCate" color="#FF6666">
-    <van-tab title="推荐" class="tab">
-      <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
-        <swiper-item wx:for="{{hotArticles}}" wx:key="id">
-          <image src="{{item.url}}" background-size="cover" data-banner="{{item}}" bindtap="naviToBanner"></image>
-        </swiper-item>
-      </swiper>
-      <view class="article-follow">—— 文章 ——</view>
-      <view class="article-card" wx:for="{{articles}}" wx:for-item="item" wx:key="id">
-        <navigator class="content" url="../article/article?id={{item.id}}">
-          <image class="cover" src="{{item.coverUrl}}" mode="widthFix"></image>
-          <text class="title">{{item.title}}</text>
-          <text class="desc">{{item.content}}</text>
-        </navigator>
-        <view class="operation">
-            <text class="date">{{dateUtil.dateFormat(item.createTime)}}</text>
-            <button class="share-btn" data-article="{{item}}" open-type="share">
-              <van-button size="mini" icon="share"/>
-            </button>
-            <view class="share-btn">
-              <van-button size="mini" icon="star-o" wx:if="{{item.collected == 0}}" data-article="{{item}}" bindtap="collectArticle"/>
-              <van-button size="mini" icon="star" wx:if="{{item.collected == 1}}" data-article="{{item}}" bindtap="uncollectArticle"/>
-            </view>
-          </view>
-      </view>
-    </van-tab>
-    <van-tab title="{{item.name}}"  wx:for="{{groups}}" wx:key="id"  wx:for-item="item" >
-      <view class="cate-item a-section a-new">
-        <view class="label-container">
-          <van-button type="{{label.active ? 'info' : 'default'}}" class="label" size="small" bindtap="choseLabel"
-            wx:for="{{item.labels}}" wx:key="labelId" wx:for-item="label" data-label="{{label}}">
-            {{label.name}}
-          </van-button>
-        </view>
-        <view class="noContent" wx:if="{{item.articleList.length == 0}}">
-          <van-icon name="bullhorn-o" size="120rpx" />
-          <view>没有更多文章啦～～</view>
-        </view>
-        <view class="article-card" wx:for="{{item.articleList}}" wx:for-item="article" wx:key="articleId">
-          <navigator class="content" url="../article/article?id={{article.id}}">
-            <image class="cover" src="{{article.coverUrl}}" mode="widthFix"></image>
-            <text class="title">{{article.title}}</text>
-            <text class="desc">{{article.content}}</text>
-          </navigator>
-          <view class="operation">
-              <text class="date">{{dateUtil.dateFormat(article.createTime)}}</text>
-              <button class="share-btn" data-article="{{article}}" open-type="share">
-                <van-button size="mini" icon="share"/>
-              </button>
-              <view class="share-btn">
-                <van-button size="mini" icon="star-o" wx:if="{{article.collected == 0}}" data-article="{{article}}" bindtap="collectArticle"/>
-                <van-button size="mini" icon="star" wx:if="{{article.collected == 1}}" data-article="{{article}}" bindtap="uncollectArticle"/>
-              </view>
-            </view>
-        </view>
-      </view>
-    </van-tab>
-  </van-tabs>
+
+  <navigator url="../worksList/worksList" class="button-left">
+    <view style="color:#fff; font-size:35rpx;text-align:center">作品展示</view>
+  </navigator>
+
+  <navigator url="../about/about" class="button-right">
+    <view style="color:#fff; font-size:35rpx;text-align:center">关于我们</view>
+  </navigator>
 </view>

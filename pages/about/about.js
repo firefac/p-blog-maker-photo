@@ -1,48 +1,39 @@
 // about.js
 var app = getApp()
 var util = require("../../utils/util.js");
-
-
+var WxParse = require('../../lib/wxParse/wxParse.js');
 var api = require("../../config/api.js");
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    load_statue: true,
-    shopInfo: {
-      name: 'firefac',
-      address: 'www.firefac.com',
-      latitude: 31.2396935,
-      longitude: 121.4975666,
-      linkPhone: '021-xxxx-xxxx'
-    },
+    about: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    
+  
+  onLoad: function(options) {
+      this.getAboutInfo();
   },
+  // 获取商品信息
+  getAboutInfo: function() {
+    let that = this;
+    util.request(api.SnsAboutDetail, {
+      id: that.data.id
+    }, "POST").then(function(res) {
+      if (res.errcode === '0') {
+        that.setData({
+          about: res.data
+        });
 
-  showLocation: function (e) {
-    var that = this
-    wx.openLocation({
-      latitude: that.data.shopInfo.latitude,
-      longitude: that.data.shopInfo.longitude,
-      name: that.data.shopInfo.name,
-      address: that.data.shopInfo.address,
-    })
-  },
-  callPhone: function (e) {
-    var that = this
-    wx.makePhoneCall({
-      phoneNumber: that.data.shopInfo.linkPhone,
-    })
-  },
-  reLoad: function (e) {
-    this.loadShopInfo();
+        WxParse.wxParse('detail', 'html', res.data.content, that);
+        
+      }
+    });
   }
 })

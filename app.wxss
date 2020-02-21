@@ -2,7 +2,7 @@
 
 .container {
   box-sizing: border-box;
-  background-color: #ffffff;
+  background-color: #fff;
   font-family: PingFangSC-Light, helvetica, 'Heiti SC';
 }
 
@@ -18,41 +18,6 @@ view, text {
   /*color: #333;*/
 }
 
-.search {
-  height: 88rpx;
-  width: 100%;
-  padding: 0 30rpx;
-  background: #fff;
-  display: flex;
-  align-items: center;
-}
-
-.search .input {
-  width: 640rpx;
-  height: 56rpx;
-  background: #ededed;
-  border-radius: 8rpx;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 20rpx;
-}
-
-.search .icon {
-  background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/search2-2fb94833aa.png) center no-repeat;
-  background-size: 100%;
-  width: 28rpx;
-  height: 28rpx;
-}
-
-.search .txt {
-  height: 42rpx;
-  line-height: 42rpx;
-  color: #666;
-  padding-left: 10rpx;
-  font-size: 30rpx;
-}
-
 .share-btn{
   height: 100%;
   display: inline-block;
@@ -64,6 +29,84 @@ view, text {
 
 .share-btn::after{
   border: 0px solid black;
+}
+
+.works-card{
+  padding: 0rpx 0rpx 50rpx 0rpx;
+  background: #000;
+}
+
+.works-card .content {
+  width: 750rpx;
+  padding-bottom: 20rpx;
+}
+
+.works-card  .tags{ 
+  margin: 10rpx 30rpx 10rpx 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.works-card  .tags .tag{
+  margin: 0 20rpx 10rpx 0;
+}
+
+.works-card .operation {
+  padding: 20rpx 30rpx 10rpx 30rpx;
+  display:flex;
+}
+.works-card .operation .likes {
+  width: 75%;
+  display: flex;
+}
+
+.works-card .operation .likes .avatar {
+  height: 50rpx;
+  width: 50rpx;
+  border: 1rpx solid rgba(255, 255, 255, 1);
+  border-radius: 50%;
+}
+
+.works-card .operation .likes .avatar:nth-of-type(n+2) {
+  margin-left: -15rpx;
+}
+
+.works-card .operation .likes .txt {
+  font-size: 26rpx;
+  color: #fff;
+  line-height: 60rpx;
+  margin: 0rpx 10rpx;
+}
+
+.works-card .operation .btn {
+  display:flex;
+  text-align: center;
+  width: 25%;
+}
+
+.works-card .operation .share-btn {
+  margin-left: 30rpx;
+  background-color:transparent;
+}
+
+.works-card .content .cover {
+  width: 750rpx;
+  height: 100%;
+}
+
+.works-card .content .title {
+  font-size: 32rpx;
+  font-weight: bold;
+  padding: 5rpx 30rpx 5rpx 30rpx;
+  display: block;
+  color: #ffffff;
+}
+
+.works-card .content .desc {
+  font-size: 26rpx;
+  color:#ccc;
+  padding: 0rpx 30rpx;
+  display: block;
 }
 
 .article-card{

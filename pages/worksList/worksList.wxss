@@ -1,0 +1,23 @@
+page{
+  background-color: #000;
+}
+
+.container {
+  box-sizing: border-box;
+  background-color: #000;
+  font-family: PingFangSC-Light, helvetica, 'Heiti SC';
+}
+
+.img-collects {
+  height: 50rpx;
+  width: 120rpx;
+  padding: 5rpx;
+  background-color: rgba(0,0,0,0.5);
+  font-size: 20rpx;
+  box-sizing: border-box;
+  background-size: 55rpx auto;
+  position: absolute;
+  right: 10rpx;
+  bottom: 20rpx;
+  border-radius: 10px;
+}

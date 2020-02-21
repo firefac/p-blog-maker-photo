@@ -9,9 +9,9 @@
 		"uglifyFileName": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.4.0",
-	"appid": "wx8b4db834d5ce588e",
-	"projectname": "blog",
+	"libVersion": "2.10.1",
+	"appid": "wx7bd6a190588dbb43",
+	"projectname": "meker",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {
@@ -41,8 +41,8 @@
 				},
 				{
 					"id": -1,
-					"name": "查找",
-					"pathName": "pages/search/search",
+					"name": "创作列表",
+					"pathName": "pages/worksList/worksList",
 					"query": ""
 				},
 				{

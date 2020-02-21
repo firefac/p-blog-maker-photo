@@ -6,7 +6,7 @@
 // 云平台测试时使用
 // var WxApiRoot = 'https://test-lxb43p1pjra1.firefac.cn/openapi/';
 // 云平台上线时使用
- var WxApiRoot = 'https://rsp19j88coh7.firefac.cn/openapi/';
+ var WxApiRoot = 'https://test-kter4wq76q06.firefac.cn/openapi/';
 
 module.exports = {
   IndexUrl: WxApiRoot + 'home/index', //首页数据接口
@@ -21,6 +21,12 @@ module.exports = {
   ArticleCollect: WxApiRoot + 'article/collect', // 文章收藏
   ArticleMyCollect: WxApiRoot + 'article/collect/mine', // 文章收藏
   ArticleMyFootprint: WxApiRoot + 'article/footprint/mine', // 文章收藏
+
+  SnsWorksList: WxApiRoot + 'sns/works/list', // 创作列表
+  SnsWorksDetail: WxApiRoot + 'sns/works/detail', // 创作详情
+  SnsAboutDetail: WxApiRoot + 'sns/about/detail', // 关于我们
+
+  SnsUpAction: WxApiRoot + 'sns/post/up/action', // 点赞操作
 
   AuthLoginByWeixin: WxApiRoot + 'user/auth/miniprogram/login', //微信登录
   AuthLoginByAccount: WxApiRoot + 'auth/login', //账号登录
