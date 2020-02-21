@@ -4,6 +4,7 @@ var api = require('../../config/api.js');
 Page({
   data: {
     worksList: [],
+    noContent: false,
     hashtagId: null,
     labelId: 0,
     labelName: '',
@@ -91,6 +92,12 @@ Page({
             worksList: that.data.worksList.concat(res.data.list)
           });
 
+          if(res.data.list.length == 0 && that.data.pageNum == 1){
+            that.setData({
+              noContent: true
+            })
+          }
+
           if(res.data.list.length < that.data.pageSize){
             that.data.lastPage = true
           }
@@ -137,6 +144,7 @@ Page({
                 worksList[i].upCt = worksList[i].upCt + 1
 
                 userInfo.avatar = userInfo.avatarUrl
+                userInfo.userId = userInfo.id
                 worksList[i].upVos.unshift(userInfo)
               }else if(actiontype == 2){
                 worksList[i].uped = 0
@@ -144,7 +152,7 @@ Page({
 
                 var upVOs = worksList[i].upVos
                 for(var j = 0; j < upVOs.length; j++){
-                  if(upVOs[j].avatar == userInfo.avatarUrl){
+                  if(upVOs[j].userId == userInfo.id){
                     worksList[i].upVos.splice(j, 1)
                     break
                   }

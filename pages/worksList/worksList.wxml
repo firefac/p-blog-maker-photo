@@ -1,6 +1,10 @@
 <wxs module="dateUtil" src="../../utils/timeUtil.wxs"></wxs>
 
 <view class="container">
+  <view class="noContent" wx:if="{{noContent}}">
+    <van-icon name="bullhorn-o" size="120rpx" color="#fff"/>
+    <view>作者很懒，还没留下什么创作呢～～</view>
+  </view>
   <view class="works-card" wx:for="{{worksList}}" wx:for-item="works" wx:key="worksId">
     <view class="content" wx:if="{{works.type == 1}}">
       <image class="cover" wx:if="{{works.imageList.length == 1}}" src="{{works.imageList[0]}}" mode="widthFix" data-from="{{works.imageList}}" data-src="{{picItem}}" bindtap="imgTap"></image>

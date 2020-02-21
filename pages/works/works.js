@@ -70,6 +70,7 @@ Page({
             works.upCt = works.upCt + 1
 
             userInfo.avatar = userInfo.avatarUrl
+            userInfo.userId = userInfo.id
             works.upVos.unshift(userInfo)
           }else if(actiontype == 2){
             works.uped = 0
@@ -77,7 +78,7 @@ Page({
 
             var upVOs = works.upVos
             for(var j = 0; j < upVOs.length; j++){
-              if(upVOs[j].avatar == userInfo.avatarUrl){
+              if(upVOs[j].userId == userInfo.id){
                 works.upVos.splice(j, 1)
                 break
               }
