@@ -47,32 +47,8 @@
 				},
 				{
 					"id": -1,
-					"name": "我的",
-					"pathName": "pages/ucenter/index/index",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "登录",
-					"pathName": "pages/auth/login/login",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "账号登录",
-					"pathName": "pages/auth/accountLogin/accountLogin",
-					"query": ""
-				},
-				{
-					"id": -1,
 					"name": "关于",
 					"pathName": "pages/about/about",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "意见反馈",
-					"pathName": "pages/ucenter/feedback/feedback",
 					"query": ""
 				},
 				{

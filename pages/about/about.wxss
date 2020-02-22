@@ -25,6 +25,8 @@ view text{
   border-left: 10rpx solid #999;
   margin: 30rpx 0rpx;
   color: #666;
+  font-size: 30rpx;
+  line-height: 38rpx;
 }
 
 .detail image {

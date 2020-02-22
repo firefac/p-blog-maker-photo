@@ -1,4 +1,4 @@
-# 公众号文章管理小程序（费尔工坊小程序开放平台，永久免费）
+# 创作展示小程序（费尔工坊小程序开放平台，永久免费）
 
 ### 开放平台介绍
 费尔工坊开放平台，为程序员、创业者、传统业者以及对电商小程序的兴趣爱好者，提供专业的电商社交等行业解决方案。帮助大家能快速搭建、并能自定义创建稳定可信赖的小程序系统。
@@ -17,7 +17,9 @@
 2. 控制台地址：[https://www.firefac.com](https://www.firefac.com)
 
 ### 程序截图展示
-![image](https://firefac-1259431066.picsh.myqcloud.com/xuoqu43uco36ios9eb65pxfbyuqtbsud.png)
+![image](https://firefac-1259431066.picsh.myqcloud.com/9ripwb11kst44n4h364mnhn293e35zzr.jpeg)
+![image](https://firefac-1259431066.picsh.myqcloud.com/cl8zsqtmzg390e8lcgt2vs36i3r7aa6g.jpeg)
+![image](https://firefac-1259431066.picsh.myqcloud.com/i8idze79fv5fym0a6qvwrjbebsjcn9w1.jpeg)
 
 ### 联系我们
 #### 关注公众号，体验小程序，更多开源免费好玩的小程序持续更新中

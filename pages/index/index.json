@@ -1,14 +1,5 @@
 {
   "navigationBarTitleText": "首页",
   "navigationStyle": "custom",
-  "enablePullDownRefresh": false,
-  "usingComponents": {
-    "zan-capsule": "../../lib/zanui-weapp/capsule/index",
-    "van-tab": "../../lib/tab/index",
-    "van-tabs": "../../lib/tabs/index",
-    "van-card": "../../lib/card/index",
-    "van-button": "../../lib/button/index",
-    "van-tag": "../../lib/tag/index",
-    "van-icon": "../../lib/icon/index"
-  }
+  "enablePullDownRefresh": false
 }

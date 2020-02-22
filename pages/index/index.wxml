@@ -3,8 +3,8 @@
 <!--index.wxml-->
 <view class="container">
   <view class="banner" style="height:{{winHeight}}px">
-    <block wx:for="{{hotArticles}}" wx:key="id" wx:for-index="idx">
-      <image class="pic" hidden="{{0 != idx && hidepic == null}}" src="{{item.url}}" animation="{{num == idx ? showpic : hidepic}}" mode="aspectFill" style="height:{{winHeight}}px"/>
+    <block wx:for="{{banner}}" wx:key="id" wx:for-index="idx">
+      <image class="pic" hidden="{{0 != idx && showpic == null}}" src="{{item.url}}" animation="{{num == idx ? showpic : hidepic}}" mode="aspectFill" style="height:{{winHeight}}px"/>
     </block>
   </view>
 

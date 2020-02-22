@@ -139,6 +139,8 @@ Page({
           for(var i = 0; i < worksList.length; i++){
             if(worksList[i].id == works.id){
               let userInfo = wx.getStorageSync('userInfo');
+
+              // 点赞操作
               if(actiontype == 1){
                 worksList[i].uped = 1
                 worksList[i].upCt = worksList[i].upCt + 1
@@ -147,6 +149,7 @@ Page({
                 userInfo.userId = userInfo.id
                 worksList[i].upVos.unshift(userInfo)
               }else if(actiontype == 2){
+                // 取消点赞
                 worksList[i].uped = 0
                 worksList[i].upCt = worksList[i].upCt - 1
 
@@ -170,7 +173,6 @@ Page({
   },
   // 图片点击事件
   imgTap(e) {
-    var that = this;
     var nowImgUrl = e.target.dataset.src;
     var tagFrom = e.target.dataset.from;
     if (typeof (tagFrom) != 'undefined' && tagFrom.length > 0) {
@@ -182,15 +184,16 @@ Page({
   },
   linkToHashtag:function(event){
     var hashtag = event.target.dataset.hashtag
+    var naviUrl = '/pages/worksList/worksList?hashtagId=' + hashtag.id + '&hashtagName=' + hashtag.name
 
     if(hashtag != null){
       if(this.data.hashtagId == null){
         wx.navigateTo({
-          url: '/pages/worksList/worksList?hashtagId=' + hashtag.id + '&hashtagName=' + hashtag.name
+          url: naviUrl
         });
       }else{
         wx.redirectTo({
-          url: '/pages/worksList/worksList?hashtagId=' + hashtag.id + '&hashtagName=' + hashtag.name
+          url: naviUrl
         });
       }
     }

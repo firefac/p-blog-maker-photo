@@ -7,18 +7,17 @@ const app = getApp();
 
 Page({
   data: {
-    hotArticles: [],
+    banner: [],
     winHeight: 1000,
     setTime:'',
     num: 0,
-    showpic:null,
-    picReady: false,
-    hidepic:null
+    showpic: null,
+    hidepic: null
   },
   onShareAppMessage: function(res) {
     return {
       title: '我的世界，我的创作',
-      imageUrl: this.data.hotArticles[0].url,
+      imageUrl: this.data.banner[0].url,
       path: '/pages/index/index'
     }
   },
@@ -31,57 +30,51 @@ Page({
   },
   resetData: function() {
     this.setData({
-      hotArticles: []
+      banner: []
     })
   },
   getIndexData: function() {
-    this.getHotArticlesList();
+    this.getBannerList();
   },
   onLoad: function(options) {
     this.getIndexData();
-
-    var winHeight = wx.getSystemInfoSync().windowHeight;
-    this.setData({
-      winHeight: winHeight
-    })
-
   },
   initAnimation: function() {
-    var _this=this;
-    var num=_this.data.num;
+    var that = this;
     var animation= wx.createAnimation({}) //创建一个动画实例
-    _this.setData({
-      //创建一个计时器
-        setTime: setInterval(function(){
-            _this.setData({
-                num: num++
-            })
 
-            if(num >= _this.data.hotArticles.length){
-              num=0;
-            }
-           //淡入
-            animation.opacity(1).step({
-              duration:2000
-            }) //描述动画
-            _this.setData({
-              showpic:animation.export()
-            }) //输出动画
-          //淡出
-            animation.opacity(0).step({duration:1500})
-            _this.setData({
-              hidepic:animation.export()
-            })
-      },4000)
+    //淡出
+    animation.opacity(0).step({
+      duration:1500
+    })
+    that.setData({
+      hidepic: animation.export()
+    })
+
+    //淡入
+    animation.opacity(1).step({
+      duration:2000
+    }) //描述动画
+    that.setData({
+      showpic: animation.export()
+    }) //输出动画
+
+    that.setData({
+      //创建一个计时器
+      setTime: setInterval(function(){
+        that.setData({
+            num: (that.data.num+ 1) % that.data.banner.length
+        })
+      }, 4000)
     })
   },
-  getHotArticlesList: function() {
+  getBannerList: function() {
     let that = this;
     util.request(api.IndexBanner)
     .then(function(res) {
       if (res.errcode === '0') {
         that.setData({
-          hotArticles: res.data
+          banner: res.data
         })
         that.initAnimation()
       }
@@ -98,6 +91,10 @@ Page({
   onShow: function() {
     //wx.hideTabBar({})
     // 页面显示
+    var winHeight = wx.getSystemInfoSync().windowHeight;
+    this.setData({
+      winHeight: winHeight
+    })
   },
   onHide: function() {
     // 页面隐藏

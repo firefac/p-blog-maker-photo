@@ -18,7 +18,15 @@
     line-height: 1.8;
 }
 view{
-    word-break:break-all; overflow:auto;
+    word-break:break-all; 
+    overflow:auto;
+    font-size: 35rpx;
+    line-height: 50rpx;
+}
+
+text{
+    font-size: 35rpx;
+    line-height: 50rpx;
 }
 .wxParse-inline{
     display: inline;
@@ -82,6 +90,10 @@ view{
     color: deepskyblue;
     word-break:break-all;
     overflow:auto;
+}
+
+.wxParse-p{
+    margin: 10rpx 0rpx;
 }
 
 .wxParse-video{
