@@ -4,6 +4,10 @@
   height: 417rpx;
 }
 
+.wxParse-p{
+    margin: 10rpx 0rpx;
+}
+
 .content{
   padding: 50rpx 30rpx;
 }

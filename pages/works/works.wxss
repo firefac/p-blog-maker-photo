@@ -2,6 +2,10 @@
   padding: 10rpx 30rpx 50rpx 30rpx;
 }
 
+.wxParse-p{
+    margin: 10rpx 0rpx;
+}
+
 .content image {
   display: inline-block;
   width: 100%;
@@ -75,6 +79,19 @@
   font-size: 32rpx;
   font-weight: bold;
   color: #000;
+}
+
+.contact {
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 100%;
+  position: fixed;
+  bottom: 50rpx;
+  right: 10rpx;
+  font-size: 20rpx;
+  box-sizing: border-box;
+  background: url("https://firefac-1259431066.picsh.myqcloud.com/zv6kq2ms0e811z0q5zcc8p1pf7fz67mc.png") no-repeat center 21rpx;
+  background-size: 55rpx auto;
 }
 
 @import '../../lib/wxParse/wxParse.wxss'

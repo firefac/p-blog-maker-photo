@@ -44,5 +44,11 @@
       <template is="wxParse" data="{{wxParseData:detail.nodes}}" />
     </scroll-view>
   </view>
+
+  <!-- 联系客服 -->
+  <view class="contact">
+    <contact-button style="opacity:0;position:absolute;" type="default-dark" session-from="weapp" size="27">
+    </contact-button>
+  </view>
 </view>
 

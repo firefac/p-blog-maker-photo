@@ -4,7 +4,7 @@
   </view>
 
   <view class="content">
-    <view class="title">{{about.title}}</view>
+    <view class="title" wx:if="{{about.title != null}}">{{about.title}}</view>
     <view class="sub-title" wx:if="{{about.subTitle != null}}">{{about.subTitle}}</view>
 
     <scroll-view class="detail">

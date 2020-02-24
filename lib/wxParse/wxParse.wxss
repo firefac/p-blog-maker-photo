@@ -92,10 +92,6 @@ text{
     overflow:auto;
 }
 
-.wxParse-p{
-    margin: 10rpx 0rpx;
-}
-
 .wxParse-video{
     text-align: center;
     margin: 10px 0;

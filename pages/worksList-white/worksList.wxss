@@ -52,8 +52,3 @@ page{
   padding: 0rpx 30rpx;
   display: block;
 }
-
-.van-grid-item__content{
-  background-color: #666;
-}
-
