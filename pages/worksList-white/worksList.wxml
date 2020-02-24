@@ -2,7 +2,7 @@
 
 <view class="container">
   <view class="noContent" wx:if="{{noContent}}">
-    <van-icon name="bullhorn-o" size="120rpx" color="#fff"/>
+    <van-icon name="bullhorn-o" size="120rpx"/>
     <view>作者很懒，还没留下什么创作呢～～</view>
   </view>
   <view class="works-card" wx:for="{{worksList}}" wx:for-item="works" wx:key="worksId">
@@ -37,10 +37,10 @@
         <view class="btn">
           <view class="share-btn">
             <van-icon color="#CC3333" size="20px" name="like" wx:if="{{works.uped == 1}}" data-works="{{works}}" data-type="{{2}}" bindtap="upAction"/>
-            <van-icon color="#fff" size="20px" name="like-o" wx:elif="{{works.uped == 0}}" data-works="{{works}}" data-type="{{1}}" bindtap="upAction"/>
+            <van-icon size="20px" name="like-o" wx:elif="{{works.uped == 0}}" data-works="{{works}}" data-type="{{1}}" bindtap="upAction"/>
           </view>
           <button class="share-btn" data-works="{{works}}" open-type="share">
-            <van-icon color="#fff" size="20px" name="share" />
+            <van-icon size="20px" name="share" />
           </button>
         </view>
       </view>

@@ -41,8 +41,14 @@
 				},
 				{
 					"id": -1,
-					"name": "创作列表",
+					"name": "创作列表-黑色",
 					"pathName": "pages/worksList/worksList",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "创作列表-白色",
+					"pathName": "pages/worksList-white/worksList",
 					"query": ""
 				},
 				{

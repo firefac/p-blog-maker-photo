@@ -5,9 +5,18 @@
     "pages/about/about",
     "pages/help/help",
     "pages/works/works",
-    "pages/worksList/worksList"
+    "pages/worksList/worksList",
+    "pages/worksList-white/worksList"
   ],
   "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "创作展示",
+    "enablePullDownRefresh": true,
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "dark"
+  },
+  "window-black": {
     "navigationBarBackgroundColor": "#000",
     "navigationBarTitleText": "创作展示",
     "enablePullDownRefresh": true,

@@ -1,5 +1,10 @@
 /**app.wxss**/
 
+:root{
+  --grid-item-content-padding: 5px;
+  --grid-item-content-background-color: #000000;
+}
+
 .container {
   box-sizing: border-box;
   background-color: #fff;
@@ -33,7 +38,6 @@ view, text {
 
 .works-card{
   padding: 0rpx 0rpx 50rpx 0rpx;
-  background: #000;
 }
 
 .works-card .content {
