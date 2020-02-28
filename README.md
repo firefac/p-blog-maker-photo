@@ -1,4 +1,4 @@
-# 创作展示小程序（费尔工坊小程序开放平台，永久免费）
+# 摄影作品展示小程序（费尔工坊小程序开放平台，永久免费）
 
 ### 开放平台介绍
 费尔工坊开放平台，为程序员、创业者、传统业者以及对电商小程序的兴趣爱好者，提供专业的电商社交等行业解决方案。帮助大家能快速搭建、并能自定义创建稳定可信赖的小程序系统。
@@ -17,9 +17,9 @@
 2. 控制台地址：[https://www.firefac.com](https://www.firefac.com)
 
 ### 程序截图展示
-![image](https://firefac-1259431066.picsh.myqcloud.com/knzhnu64st590qby4vqfoq1andzi5jmh.jpeg)
-![image](https://firefac-1259431066.picsh.myqcloud.com/bgwdgpkkn9vo5vcewh8bqxuhd6dboehd.jpeg)
-![image](https://firefac-1259431066.picsh.myqcloud.com/piu7onb2txqpo6gme0j20ecjvo1ss11l.jpeg)
+![image](https://firefac-1259431066.picsh.myqcloud.com/x79tmklogni706by2lweigdvy99w84tp.png)
+![image](https://firefac-1259431066.picsh.myqcloud.com/6lazmow23vilnvll5nqojtyt1sv1mavp.png)
+![image](https://firefac-1259431066.picsh.myqcloud.com/mkg7qyj7j2iq7pjd87mthwyuuyapvwpj.png)
 
 ### 联系我们
 #### 关注公众号，体验小程序，更多开源免费好玩的小程序持续更新中
