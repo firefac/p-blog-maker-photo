@@ -11,7 +11,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.10.1",
 	"appid": "wx7bd6a190588dbb43",
-	"projectname": "meker",
+	"projectname": "meker-photo",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {
@@ -41,14 +41,8 @@
 				},
 				{
 					"id": -1,
-					"name": "创作列表-黑色",
+					"name": "创作列表",
 					"pathName": "pages/worksList/worksList",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "创作列表-白色",
-					"pathName": "pages/worksList-white/worksList",
 					"query": ""
 				},
 				{

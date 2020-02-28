@@ -5,8 +5,8 @@
     "pages/about/about",
     "pages/help/help",
     "pages/works/works",
-    "pages/worksList/worksList",
-    "pages/worksList-white/worksList"
+    "pages/worksList-tag/worksList",
+    "pages/worksList/worksList"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",
@@ -16,31 +16,29 @@
     "backgroundColor": "#fff",
     "backgroundTextStyle": "dark"
   },
-  "window-black": {
-    "navigationBarBackgroundColor": "#000",
-    "navigationBarTitleText": "创作展示",
-    "enablePullDownRefresh": true,
-    "navigationBarTextStyle": "white",
-    "backgroundColor": "#000",
-    "backgroundTextStyle": "light"
-  },
   "tabBar": {
     "backgroundColor": "#fafafa",
     "borderStyle": "white",
-    "selectedColor": "#FF6666",
+    "selectedColor": "#AB956D",
     "color": "#666",
     "list": [
       {
-        "pagePath": "pages/help/help",
+        "pagePath": "pages/index/index",
         "iconPath": "static/images/home.png",
         "selectedIconPath": "static/images/home@selected.png",
         "text": "首页"
       },
       {
-        "pagePath": "pages/help/help",
+        "pagePath": "pages/worksList/worksList",
+        "iconPath": "static/images/icon_collect.png",
+        "selectedIconPath": "static/images/icon_collect_checked.png",
+        "text": "我的作品"
+      },
+      {
+        "pagePath": "pages/about/about",
         "iconPath": "static/images/my.png",
         "selectedIconPath": "static/images/my@selected.png",
-        "text": "个人"
+        "text": "关于我们"
       }
     ]
   },

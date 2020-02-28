@@ -1,15 +1,11 @@
 <wxs module="dateUtil" src="../../utils/timeUtil.wxs"></wxs>
 
 <view class="container">
-  <view class="images" wx:if="{{works.type == 1 || works.type == 2}}">
-    <block wx:for="{{ works.imageList }}" wx:for-item="picItem">
-      <image style="width: 100%;" src="{{picItem}}" mode="widthFix" data-from="{{works.imageList}}" data-src="{{picItem}}" bindtap="imgTap"></image>
-    </block>
-  </view>
 
   <view class="describe-content">
+    <view class="short-content" wx:if="{{works.type == 1 || works.type == 2}}">{{works.content}}</view>
     <view class="title" wx:if="{{works.type == 3}}">{{works.title}}</view>
-    <view class="sub-title" wx:if="{{works.type == 3}}">
+    <view class="sub-title" wx:if="{{works.type == 3 || works.type == 2}}">
       <text wx:if="{{works.author != null}}" style="padding-right:50rpx;">作者：{{works.author}}</text>
       <text>{{dateUtil.dateFormat(works.createTime)}}</text>
     </view>
@@ -25,11 +21,11 @@
       </view>
       <view class="btn">
         <view class="share-btn">
-          <van-icon color="#CC3333" size="20px" name="like" wx:if="{{works.uped == 1}}" data-works="{{works}}" data-type="{{2}}" bindtap="upAction"/>
-          <van-icon color="#000" size="20px" name="like-o" wx:elif="{{works.uped == 0}}" data-works="{{works}}" data-type="{{1}}" bindtap="upAction"/>
+          <van-icon color="#CC3333" size="18px" name="like" wx:if="{{works.uped == 1}}" data-works="{{works}}" data-type="{{2}}" bindtap="upAction"/>
+          <van-icon color="#000" size="18px" name="like-o" wx:elif="{{works.uped == 0}}" data-works="{{works}}" data-type="{{1}}" bindtap="upAction"/>
         </view>
         <button class="share-btn" data-works="{{works}}" open-type="share">
-          <van-icon color="#000" size="20px" name="share" />
+          <van-icon color="#000" size="18px" name="share" />
         </button>
       </view>
     </view>
@@ -37,7 +33,11 @@
       <van-tag class="tag" size="medium" color="#003366"  wx:for="{{ works.hashtags }}" wx:for-item="hashtag" data-hashtag="{{hashtag}}" bindtap="linkToHashtag">#{{hashtag.name}}</van-tag>
     </view>
 
-    <text class="short-content" wx:if="{{works.type == 1 || works.type == 2}}">{{works.content}}</text>
+    <view class="images" wx:if="{{works.type == 1 || works.type == 2}}">
+      <block wx:for="{{ works.imageList }}" wx:for-item="picItem">
+        <image style="width: 100%;" src="{{picItem}}" mode="widthFix" data-from="{{works.imageList}}" data-src="{{picItem}}" bindtap="imgTap"></image>
+      </block>
+    </view>
 
     <scroll-view class="content">
       <import src="../../lib/wxParse/wxParse.wxml" />

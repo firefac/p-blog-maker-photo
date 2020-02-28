@@ -82,6 +82,7 @@ Page({
     var that = this;
 
     util.request(api.SnsWorksList, {
+        types: [2],
         hashtagId: that.data.hashtagId,
         pageNum: that.data.pageNum,
         pageSize: that.data.pageSize
@@ -184,7 +185,7 @@ Page({
   },
   linkToHashtag:function(event){
     var hashtag = event.target.dataset.hashtag
-    var naviUrl = '/pages/worksList/worksList?hashtagId=' + hashtag.id + '&hashtagName=' + hashtag.name
+    var naviUrl = '/pages/worksList-tag/worksList?hashtagId=' + hashtag.id + '&hashtagName=' + hashtag.name
 
     if(hashtag != null){
       if(this.data.hashtagId == null){

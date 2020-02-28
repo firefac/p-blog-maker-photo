@@ -4,9 +4,9 @@
 // 局域网测试使用
 // var WxApiRoot = 'http://192.168.0.101:8080/wx/';
 // 云平台测试时使用
-// var WxApiRoot = 'https://test-kter4wq76q06.firefac.cn/openapi/';
+ var WxApiRoot = 'https://test-kter4wq76q06.firefac.cn/openapi/';
 // 云平台上线时使用
- var WxApiRoot = 'https://qufl5f2apf3p.firefac.cn/openapi/';
+// var WxApiRoot = 'https://qufl5f2apf3p.firefac.cn/openapi/';
 
 module.exports = {
   IndexUrl: WxApiRoot + 'home/index', //首页数据接口
