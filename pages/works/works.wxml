@@ -1,7 +1,9 @@
 <wxs module="dateUtil" src="../../utils/timeUtil.wxs"></wxs>
 
-<view class="container">
-
+<view wx:if="{{works.type == 4}}" >
+  <web-view src="{{works.jumpInfo}}" />
+</view>
+<view class="container" wx:else>
   <view class="describe-content">
     <view class="short-content" wx:if="{{works.type == 1 || works.type == 2}}">{{works.content}}</view>
     <view class="title" wx:if="{{works.type == 3}}">{{works.title}}</view>

@@ -97,7 +97,7 @@ Page({
     var that = this;
 
     util.request(api.SnsWorksList, {
-        types: [1, 3],
+        types: [1, 3, 4],
         hashtagId: that.data.hashtagId,
         pageNum: that.data.pageNum,
         pageSize: that.data.pageSize
